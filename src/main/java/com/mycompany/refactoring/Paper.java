@@ -4,19 +4,25 @@
  */
 package com.mycompany.refactoring;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author agome
  */
 public class Paper extends Choice{
-    @Override
-    public void match(Choice choice){
-        Paper paper = new Paper();
-        if (choice.equals(new Rock()))
-            beats = paper;
-        else if (choice.equals(new Scissor()))
-            loses = paper;
-        else if (choice.equals(paper))
-            draw++;
+
+    public Paper() {
+        this.name = "paper";
+        this.beats = new ArrayList<>();
+        this.setBeats();
+    }
+
+    public void setBeats() {
+        this.beats.add(new Rock());
+    }
+    
+    public void setLoses() {
+        this.beats.add(new Scissors());
     }
 }

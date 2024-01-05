@@ -4,13 +4,25 @@
  */
 package com.mycompany.refactoring;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author agome
  */
 public class Round {
-    public void setWinnerGame(RPMgame rpmGame){
-        //cuerpo del metodo
-        
+    private Player winnerRound;
+    private ArrayList<Lanzamiento> lanzamientos;
+
+    public Round() {
+        this.lanzamientos = new ArrayList<>();
+    }
+    
+    public void newLanzamiento(Player player1, Player player2){
+        lanzamientos.add(new Lanzamiento(player1, player2));
+    }
+    
+    public void setWinnerRound(Player winner){
+        this.winnerRound = winner;
     }
 }

@@ -9,5 +9,5 @@ package com.mycompany.refactoring;
  * @author agome
  */
 public interface Game {
-    public void play();
+    void play();
 }

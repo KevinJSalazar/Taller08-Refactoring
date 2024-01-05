@@ -10,10 +10,10 @@ import java.util.ArrayList;
  *
  * @author agome
  */
-public class Rock extends Choice{
+public class Scissors extends Choice{
     
-    public Rock() {
-        this.name = "rock";
+    public Scissors() {
+        this.name = "scissorss";
         this.beats = new ArrayList<>();
         this.setBeats();
     }
@@ -23,6 +23,6 @@ public class Rock extends Choice{
     }
     
     public void setLoses() {
-        this.beats.add(new Paper());
+        this.beats.add(new Rock());
     }
 }
