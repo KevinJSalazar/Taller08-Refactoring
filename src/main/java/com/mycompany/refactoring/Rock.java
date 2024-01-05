@@ -12,6 +12,14 @@ public class Rock extends Choice{
     
     @Override
     public void match(Choice choice){
-        //cuerpo del metodo
+        Rock rock = new Rock();
+        if (choice.equals(new Paper()))
+            loses = rock;
+        else if (choice.equals(new Scissor()))
+            beats = rock;
+        else if (choice.equals(rock))
+            draw++;
     }
+    
+    
 }

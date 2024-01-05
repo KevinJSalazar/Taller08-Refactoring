@@ -11,6 +11,12 @@ package com.mycompany.refactoring;
 public class Scissor extends Choice{
     @Override
     public void match(Choice choice){
-        //cuerpo del metodo
+        Scissor scissor = new Scissor();
+        if (choice.equals(new Paper()))
+            beats = scissor;
+        else if (choice.equals(new Rock()))
+            loses = scissor;
+        else if (choice.equals(scissor))
+            draw++;
     }
 }

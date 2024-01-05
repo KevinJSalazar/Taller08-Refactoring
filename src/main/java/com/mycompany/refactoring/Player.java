@@ -10,22 +10,32 @@ package com.mycompany.refactoring;
  */
 public class Player {
     protected int wins;
+    Choice choice;
     
     public void setChoice(){
-        //cuerpo del metodo
+       int c = (int)(Math.random()*3);
+       switch(c) {
+           case 0:
+               choice = new Rock();
+               break;
+           case 1:
+               choice = new Paper();
+               break;
+           case 2:
+               choice = new Scissor();
+               break;
+       }
     }
     
     public Choice getChoice(){
-        //cuerpo del metodo
-        return new Choice();
+        return choice;
     }
     
-    public void setWins(){
-        //cuerpo del metodo
+    public void setWins(int wins){
+        this.wins = wins;
     }
     
     public int getWins(){
-        //cuerpo del metodo
-        return 0;
+        return wins;
     }
 }

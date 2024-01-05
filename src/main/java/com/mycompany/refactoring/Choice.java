@@ -4,14 +4,17 @@
  */
 package com.mycompany.refactoring;
 
+import java.util.List;
+
 /**
  *
  * @author agome
  */
 public abstract class Choice {
-    private Choice beats;
-    private Choice loses;
+    protected List<Choice> beats;
+    protected List<Choice> loses;
     
     public abstract void match(Choice choice);
     
 }
+//implementar metodo equals
